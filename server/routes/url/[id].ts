@@ -1,7 +1,7 @@
 import Redis from 'ioredis';
 
-const redis = new Redis();
 const runtimeConfig = useRuntimeConfig();
+const redis = new Redis({ host: runtimeConfig.redisHost });
 
 
 export default defineEventHandler(async (event) => {
