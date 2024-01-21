@@ -20,6 +20,10 @@
         <ShortensCounter />
       </div>
     </main>
+
+    <footer class="flex">
+      <a class="m-auto link underline text-primary" href="https://github.com/gdwr/urlshort"> See the source </a>
+    </footer>
   </div>
 </template>
 
