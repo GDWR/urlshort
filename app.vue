@@ -1,6 +1,6 @@
 <template >
   <Head>
-    <Title>url.gdwr.me</Title>
+    <Title>urlshort.gdwr.me</Title>
     <Meta name="description" content="Url shortener" />
   </Head>
   
@@ -10,7 +10,7 @@
     <UNotifications />
     <main class="flex flex-col">
       <div class="flex flex-col mx-auto my-80">
-          <h1 class="text-primary text-4xl p-8 underline md:text-6xl"> url.gdwr.me </h1>
+          <h1 class="text-primary text-4xl p-8 underline md:text-6xl"> urlshort.gdwr.me </h1>
           <UButtonGroup size="xl" orientation="horizontal" class="mx-auto">
               <UInput placeholder="Enter your url here!" v-model="url" />
               <UTooltip text="Create shortend URL" >
