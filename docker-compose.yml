@@ -1,0 +1,15 @@
+services:
+  redis:
+    image: redis:6.2-alpine
+    command: redis-server --appendonly yes
+    ports:
+      - "127.0.0.1:6379:6379"
+
+  urlshort:
+    build: .
+    image: ghcr.io/gdwr/urlshort:development
+    environment:
+      NUXT_REDIS_HOST: redis
+      NUXT_PUBLIC_BASEURL: http://localhost:3000
+    ports:
+      - "3000:3000"
