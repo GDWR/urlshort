@@ -38,7 +38,6 @@ async function createUrl() {
       url: url.value,
     }),
     onResponseError: async (context) => {
-      // var body = await context.response.json();;
       var body = await context.response._data;
       var errors = body.error;
       toast.add({
@@ -48,8 +47,6 @@ async function createUrl() {
       });
     },
   });
-
-  console.log(response)
 
   toast.add({
     title: 'Url Shortened!',
