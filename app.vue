@@ -18,6 +18,7 @@
               </UTooltip>
           </UButtonGroup>
         <ShortensCounter />
+        <ShortensList />
       </div>
     </main>
 
@@ -28,6 +29,8 @@
 </template>
 
 <script setup lang="ts">
+import ShortensList from './components/ShortensList.vue';
+
 const url = ref("");
 const toast = useToast();
 
