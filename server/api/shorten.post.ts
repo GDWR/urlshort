@@ -23,7 +23,7 @@ export default defineEventHandler(async (event) => {
   const id = uniqid();
   
   await redis.set(`shorten:${id}`, url);
-  var shortens = await redis.incr(`shorten:count`);
+  var shortens = await redis.incr(`shorten_count`);
   await redis.publish(`shorten`, JSON.stringify({ shortens: shortens }));
 
   return {

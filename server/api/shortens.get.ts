@@ -5,6 +5,6 @@ const redis = new Redis({ host: runtimeConfig.redisHost });
 
 export default defineEventHandler(async (event) => {
   return {
-    shortens: await redis.get(`shorten:count`),
+    shortens: await redis.get(`shorten_count`),
   };
 });
